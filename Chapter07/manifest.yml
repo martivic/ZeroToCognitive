@@ -3,11 +3,11 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: Z2C
-  host: Z2C
+  name: martivicjune
+  host: martiviczerojune1
   disk_quota: 1024M
   services:
-    - Speech to Text-xx
-    - Text to Speech-xx
-    - Natural Language Classifier-xx
-    - Cloudant NoSQL DB-xx
+    - dot-pi-assistant-STT
+    - dot-pi-assist-TTS
+    - NaturalLanguageClassifierV1
+    - martivicmay17-cloudantNoSQLDB

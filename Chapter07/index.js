@@ -51,7 +51,7 @@ openssl genrsa -out key.pem
 openssl req -new -key key.pem -out csr.pem
 openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem
 **/
-if (cfenv.getAppEnv().isLocal == true)
+if (cfenv.getAppEnv().isLocal == false)
 {
   var pkey = fs.readFileSync('key.pem');
   var pcert = fs.readFileSync('cert.pem')
@@ -91,7 +91,7 @@ app.use(bodyParser.json());
 
 app.use('/', require("./controller/restapi/router"));
 
-if (cfenv.getAppEnv().isLocal == true)
+if (cfenv.getAppEnv().isLocal == false)
   {
     https.createServer(httpsOptions, app).listen(app.get('port'),
         function(req, res) {console.log(app.get('appName')+' is listening on port: ' + app.get('port'));});
