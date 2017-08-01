@@ -3,11 +3,11 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: martivicjune
-  host: martiviczerojune1
+  name: maketimeMA
+  host: maketimeMA
   disk_quota: 1024M
   services:
-    - dot-pi-assistant-STT
-    - dot-pi-assist-TTS
-    - NaturalLanguageClassifierV1
-    - martivicmay17-cloudantNoSQLDB
+    - Speech To Text-55
+    - Text To Speech-55
+    - Natural Language Classifier-55
+    - Cloudant NoSQL DB-55

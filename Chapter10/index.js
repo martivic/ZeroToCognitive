@@ -78,7 +78,7 @@ app.get('/login*', function (req, res) {loadSelectedFile(req, res);});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.set('appName', 'z2c-chapter10');
+app.set('appName', 'martivic05');
 app.set('port', appEnv.port);
 
 app.set('views', path.join(__dirname + '/HTML'));
@@ -92,7 +92,7 @@ app.use(bodyParser.json());
 
 app.use('/', require("./controller/restapi/router"));
 
-if (cfenv.getAppEnv().isLocal == true)
+if (cfenv.getAppEnv().isLocal == false)
   {
     https.createServer(httpsOptions, app).listen(app.get('port'),
         function(req, res) {console.log(app.get('appName')+' is listening on port: ' + app.get('port'));});

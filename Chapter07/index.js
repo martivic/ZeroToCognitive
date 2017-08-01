@@ -51,7 +51,7 @@ openssl genrsa -out key.pem
 openssl req -new -key key.pem -out csr.pem
 openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem
 **/
-if (cfenv.getAppEnv().isLocal == false)
+if (cfenv.getAppEnv().isLocal == true)
 {
   var pkey = fs.readFileSync('key.pem');
   var pcert = fs.readFileSync('cert.pem')
@@ -77,7 +77,7 @@ app.get('/login*', function (req, res) {console.log("login session is: "+req.ses
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.set('appName', 'z2c-chapter07');
+app.set('appName', 'martivic03');
 app.set('port', appEnv.port);
 
 app.set('views', path.join(__dirname + '/HTML'));

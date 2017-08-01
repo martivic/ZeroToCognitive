@@ -33,7 +33,7 @@ var app = express();
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.set('appName', 'z2c-chapter06');
+app.set('appName', 'martivic03');
 app.set('port', appEnv.port);
 
 app.set('views', path.join(__dirname + '/HTML'));
